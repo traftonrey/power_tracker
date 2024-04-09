@@ -1,4 +1,4 @@
-# Miscellaneous
+# General
 *.class
 *.log
 *.pyc
@@ -37,7 +37,49 @@ app.*.symbols
 # Obfuscation related
 app.*.map.json
 
-# Android Studio will place build artifacts here
+# Android Studio build artifacts
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# If you're using Gradle, you might want to ignore the following directories as well
+.gradle/
+/build/
+
+# Local .properties files
+**/local.properties
+
+# macOS specific
+**/.DS_Store
+
+# Windows specific
+**/Thumbs.db
+**/Desktop.ini
+
+# Visual Studio Code - Workspace-specific settings
+.vscode/
+
+# Temporary files created by Dart tools
+**/*.bak
+
+# User-specific stuff:
+**/.idea/workspace.xml
+**/.idea/tasks.xml
+**/.idea/gradle.xml
+**/.idea/assetWizardSettings.xml
+**/.idea/dictionaries
+
+# User-specific flutter build log
+**/flutter_*.log
+
+# Others
+*.jks
+*.keystore
+secret.key
+key.properties
+
+# Fastlane
+**/fastlane/report.xml
+**/fastlane/Preview.html
+**/fastlane/screenshots
+**/fastlane/test_output
