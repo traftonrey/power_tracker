@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "481557455365",
+    "project_id": "power-tracker-6d39f",
+    "storage_bucket": "power-tracker-6d39f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:481557455365:android:b6d4b490b02b9be8c6b26c",
+        "android_client_info": {
+          "package_name": "com.example.power_tracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "481557455365-n3g2l5g268dcsee9pqe023nfo4ipik3o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCLxyqC8Ecz4K9FkUn6tfzq4qOO5yuHiY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "481557455365-n3g2l5g268dcsee9pqe023nfo4ipik3o.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "481557455365-9cfahvqth1m0mjjb5g29kn06c8uoian3.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.powerTracker.RunnerTests"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
