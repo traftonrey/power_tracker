@@ -19,17 +19,17 @@ This project is a starting point for a Flutter application.
 ### Installation
 
 1. Clone the repository:
-- ```git clone https://github.com/traftonrey/power_tracker.git```
+```git clone https://github.com/traftonrey/power_tracker.git```
 
-2. Install Flutter dependencies
-- ```flutter pub get```
+2. Install Flutter dependencies:
+```flutter pub get```
 
 3. Configure firebase:
 - Follow the instructions on the Firebase console to add your project.
 - Download the google-services.json (for Android) and GoogleService-Info.plist (for iOS) and place them in the respective directories.
 
-3. Run the app
-- ```flutter run```
+3. Run the app:
+```flutter run```
 
 ## Usage
 
