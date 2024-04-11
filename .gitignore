@@ -83,3 +83,7 @@ key.properties
 **/fastlane/Preview.html
 **/fastlane/screenshots
 **/fastlane/test_output
+
+# hiding anything with secrets
+**/firebase_options.dart
+**/GoogleService-Info.plist
