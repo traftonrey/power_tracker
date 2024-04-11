@@ -5,6 +5,8 @@ import 'workout_details_screen.dart'; // Update this path as necessary
 import 'create_workout_screen.dart'; // Assuming you have this screen for creating workouts
 
 class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
+
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
@@ -22,7 +24,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('BuiltBuddy'),
+        title: const Text('BuiltBuddy'),
       ),
       body: _widgetOptions().elementAt(_selectedIndex),
       bottomNavigationBar: BottomNavigationBar(
@@ -44,7 +46,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Widget _buildWorkoutsList() {
     if (user == null) {
-      return Center(child: Text("Please sign in to view your workouts."));
+      return const Center(child: Text("Please sign in to view your workouts."));
     }
     final userId = user!.uid;
 
@@ -59,12 +61,13 @@ class _HomeScreenState extends State<HomeScreen> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text('No workouts found. Create your first workout plan!'),
+                const Text(
+                    'No workouts found. Create your first workout plan!'),
                 ElevatedButton(
                   onPressed: () => setState(() {
                     _selectedIndex = 1; // Navigate to Create Workout Screen
                   }),
-                  child: Text('Create Workout'),
+                  child: const Text('Create Workout'),
                 ),
               ],
             ),
