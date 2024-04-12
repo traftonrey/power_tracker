@@ -7,8 +7,6 @@ BuiltBuddy is a comprehensive Flutter application designed for fitness enthusias
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
-
 ### Prerequisites
 
 - Flutter SDK
@@ -71,3 +69,51 @@ Project Link: [https://github.com/traftonrey/power_tracker](https://github.com/t
 - Flutter documentation and community for guidance.
 - Firebase for providing a comprehensive backend solution.
 - All contributors who have helped to make this project better.
+
+## Future Plans
+
+### Social Aspect
+App will give users ability to add friends. Friends will be able to:
+-  View each others created workouts
+- Check in on their recent gym activity (introducing a social responsibility aspect)
+- Challeng
+
+### Workout generation
+- Either come up with a formula, or use AI to select exercises based on a user's height, weight, sex, other data if applicable.
+- Most importantly, for this, we'll use recent workout data if it exists. Take user feedback on intensity, and let them report injury to adjust generated workouts.
+
+### Premade workouts
+- Have a number of premade workout programs available in the app. Maybe a PPL split, upper/lower, HIIT, for example.
+
+### More workout types
+- Include things like yoga, crossfit, etc.
+- Maybe even little PT workouts for common injuries, disclaimer definitely needed, legal disclaimer might be needed if this was ever to be released to public
+
+### At-home workouts
+- Hand in hand with more workout types and workout generation, be able to generate workouts that users can do without the use of any gym equipment.
+
+### Fitness ecosystem integrations
+- Be able to use data from apple and other smart watches
+- Be able to connect with health app, android equivalent if it exists
+
+### Nutrition Advice
+- Self-explanatory, but just articles and maybe some nutrition plans that users can follow
+
+### Accessibility Features
+- Make application accessible to all users
+- - Voice commands
+- - Screen reader support
+- - Customizable interface options
+- - Dark mode
+
+### Monetization Strategies
+I want to stay away from subscriptions. I feel like there is a big market of people that are willing to pay for premium fitness apps but don't want to pay the same amount as their monthly gym membership for access.
+
+- One-time purchase
+- - Offer a sort of free trial, then hide prominent features behind a one-time paywall
+
+- In-App Advertisements
+- - Have a portion of the screen taken up by an ad-bar, would definitely exist for free accounts if above method is used. Even if the ads don't make money, users will consider buying to get rid of them
+
+- Affiliate Marketing and Partnerships
+- - Of course, this is only really applicable to if we release the app and it takes off, but we could partner with fitness equipment brands, supplement suppliers, fitness clothing brands to offer discounts and promotions
