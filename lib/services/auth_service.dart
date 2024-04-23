@@ -36,6 +36,20 @@ class AuthService {
     await _auth.signOut();
   }
 
+  Future<bool> deleteUser() async {
+    try {
+      User? currentUser = _auth.currentUser;
+      if (currentUser != null) {
+        await currentUser.delete();
+        return true;
+      }
+      return false;
+    } catch (error) {
+      print('Error deleting user: $error');
+      return false;
+    }
+  }
+
   // Get current user
   User? getCurrentUser() {
     return _auth.currentUser;

@@ -4,7 +4,8 @@ class Exercise {
   String description; // Short description of the exercise
   String category; // e.g., "Strength Training", "Cardio"
   String difficulty; // "Beginner", "Intermediate", "Advanced"
-  String? equipmentNeeded; // "None", "Dumbbells", "Resistance Bands", etc.
+  List<String>?
+      equipmentNeeded; // "None", "Dumbbells", "Resistance Bands", etc.
   String? instructions; // Detailed instructions for performing the exercise
   List<String>? muscleGroups; // List of muscle groups targeted by the exercise
 

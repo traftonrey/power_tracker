@@ -1,54 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'workout_details_screen.dart'; // Update this path as necessary
-import 'create_workout_screen.dart'; // Assuming you have this screen for creating workouts
+import 'package:power_tracker/widgets/navigation/scaffold.dart';
+import 'workout_details_screen.dart';
+import 'create_workout_screen.dart';
 
-class HomeScreen extends StatefulWidget {
+class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
   @override
-  _HomeScreenState createState() => _HomeScreenState();
-}
-
-class _HomeScreenState extends State<HomeScreen> {
-  int _selectedIndex = 0; // For bottom navigation bar
-  final user = FirebaseAuth.instance.currentUser;
-
-  List<Widget> _widgetOptions() => [
-        _buildWorkoutsList(),
-        CreateWorkoutScreen(), // Your screen for creating workouts
-      ];
-
-  @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('BuiltBuddy'),
-      ),
-      body: _widgetOptions().elementAt(_selectedIndex),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.add),
-            label: 'Create Workout',
-          ),
-        ],
-        currentIndex: _selectedIndex,
-        onTap: _onItemTapped,
-      ),
+    return MainScaffold(
+      body: _buildWorkoutsList(),
+      currentIndex: 0,
     );
   }
 
   Widget _buildWorkoutsList() {
+    final user = FirebaseAuth.instance.currentUser;
     if (user == null) {
       return const Center(child: Text("Please sign in to view your workouts."));
     }
-    final userId = user!.uid;
+    final userId = user.uid;
 
     return StreamBuilder<QuerySnapshot>(
       stream: FirebaseFirestore.instance
@@ -64,9 +37,10 @@ class _HomeScreenState extends State<HomeScreen> {
                 const Text(
                     'No workouts found. Create your first workout plan!'),
                 ElevatedButton(
-                  onPressed: () => setState(() {
-                    _selectedIndex = 1; // Navigate to Create Workout Screen
-                  }),
+                  onPressed: () {
+                    Navigator.of(context).pushReplacement(MaterialPageRoute(
+                        builder: (_) => CreateWorkoutScreen()));
+                  },
                   child: const Text('Create Workout'),
                 ),
               ],
@@ -93,11 +67,5 @@ class _HomeScreenState extends State<HomeScreen> {
         );
       },
     );
-  }
-
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
   }
 }
