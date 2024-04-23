@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
             if (snapshot.data == null) {
               return SplashScreen();
             }
-            return HomeScreen();
+            return const HomeScreen();
           }
           return const CircularProgressIndicator();
         },

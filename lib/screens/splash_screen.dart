@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import '../services/auth_service.dart';
 import 'auth/sign_in_screen.dart';
 import 'auth/sign_up_screen.dart';
 import 'home_screen.dart';
 
 class SplashScreen extends StatelessWidget {
-  final AuthService _authService = AuthService();
+  const SplashScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

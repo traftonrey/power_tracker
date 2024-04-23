@@ -1,11 +1,13 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:power_tracker/widgets/navigation/scaffold.dart';
 
 class WorkoutDetailsScreen extends StatefulWidget {
   final String userId;
   final String? workoutId;
 
-  WorkoutDetailsScreen({required this.userId, this.workoutId});
+  const WorkoutDetailsScreen({super.key, required this.userId, this.workoutId});
 
   @override
   _WorkoutDetailsScreenState createState() => _WorkoutDetailsScreenState();
@@ -41,13 +43,18 @@ class _WorkoutDetailsScreenState extends State<WorkoutDetailsScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Workout Details'),
-      ),
-      body: Center(
-        child: Text('Workout Details for User: ${widget.userId}'),
-      ),
-    );
+    return MainScaffold(body: _viewWorkout(), currentIndex: 1);
   }
+}
+
+Widget _viewWorkout() {
+  final user = FirebaseAuth.instance.currentUser;
+  return Scaffold(
+    appBar: AppBar(
+      title: const Text('Workout Details'),
+    ),
+    body: Center(
+      child: Text('Workout Details for User: ${user?.uid ?? 'None'}'),
+    ),
+  );
 }
