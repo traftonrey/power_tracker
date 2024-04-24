@@ -29,8 +29,11 @@ class _MainScaffoldState extends State<MainScaffold> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0xFF0A1628),
       appBar: AppBar(
-        title: const Text('BuiltBuddy'),
+        //changes the color of the text
+        title: const Text('BuiltBuddy', style: TextStyle(color: Color(0xe6f0e6ff)),),
+        backgroundColor: const Color(0xff6aa274),
         actions: [
           IconButton(
             icon: const Icon(Icons.account_circle),
@@ -43,6 +46,7 @@ class _MainScaffoldState extends State<MainScaffold> {
       ),
       body: widget.body,
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: const Color(0xff6aa274),
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
