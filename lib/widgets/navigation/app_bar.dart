@@ -12,7 +12,8 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      title: const Text('BuiltBuddy'),
+      title: const Text('BuiltBuddy', style: TextStyle(color: Color(0xe6f0e6ff))),
+      backgroundColor: const Color(0xff6aa274),
       actions: <Widget>[
         IconButton(
           icon: const Icon(Icons
