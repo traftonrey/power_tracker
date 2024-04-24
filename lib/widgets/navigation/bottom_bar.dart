@@ -15,9 +15,12 @@ class CustomBottomNav extends StatelessWidget {
           icon: Icon(Icons.home),
           label: 'Home',
         ),
+        
         BottomNavigationBarItem(
           icon: Icon(Icons.add),
+          
           label: 'Create Workout',
+          
         ),
       ],
       currentIndex: selectedIndex,
